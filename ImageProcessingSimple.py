@@ -24,11 +24,15 @@ imgGray = img.copy()
 for i in range(3):
     imgGray[:,:,i] = gray
 
-cv2.imshow('image', imgGray)
+cv2.imshow('Image Gray', imgGray)
 cv2.waitKey(0)
+cv2.destroyAllWindows()
 
+p1 = [50, 60]
+p2 = [320, 320]
 # toa do lan luot la 50,60 320,320
-Cut = imgGray[50:320, 60:320]
-cv2.imshow('Region Of Interest', Cut)
+# Cut = imgGray[50:320, 60:320]
+Cut = imgGray[p1[0]:p2[0], p1[1]:p2[1]]
+cv2.imshow('Region of Interest', Cut)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
